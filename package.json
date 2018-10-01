@@ -1,0 +1,25 @@
+{
+  "name": "decaf_sucks",
+  "description": "Asset compilation with webpack",
+  "version": "1.0.0",
+  "author": "Icelab",
+  "repository": {},
+  "dependencies": {
+    "viewloader": "^2.0.0"
+  },
+  "devDependencies": {
+    "icelab-assets": "^2.0.1"
+  },
+  "engines": {
+    "node": ">= 6",
+    "npm": ">= 4"
+  },
+  "scripts": {
+    "start": "icelab-assets start --source-path=assets",
+    "build": "icelab-assets build --source-path=assets",
+    "build-production": "icelab-assets build --source-path=assets",
+    "test": "icelab-assets test --source-path=assets",
+    "create-entry": "icelab-assets create-entry --source-path=assets",
+    "heroku-postbuild": "icelab-assets build --source-path=assets"
+  }
+}

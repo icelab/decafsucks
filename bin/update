@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+# update - updates the project after a fresh pull.
+
+# This script:
+#  - does nothing right now
+
+require_relative "script_helpers"
+
+in_app_root update: :bootstrap do
+end

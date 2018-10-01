@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+
+# bootstrap script - install or update project dependencies
+
+# This script:
+#  - bundle installs
+#  - yarn installs
+
+require_relative "script_helpers"
+
+in_app_root :bootstrap do
+  execute_command "bundle install"
+  execute_command "yarn install"
+end
