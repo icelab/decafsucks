@@ -15,11 +15,11 @@
     "npm": ">= 4"
   },
   "scripts": {
-    "start": "icelab-assets start --source-path=assets",
-    "build": "icelab-assets build --source-path=assets",
-    "build-production": "icelab-assets build --source-path=assets",
-    "test": "icelab-assets test --source-path=assets",
-    "create-entry": "icelab-assets create-entry --source-path=assets",
-    "heroku-postbuild": "icelab-assets build --source-path=assets"
+    "start": "icelab-assets start",
+    "build": "icelab-assets build",
+    "build-production": "icelab-assets build",
+    "test": "icelab-assets test",
+    "create-entry": "icelab-assets create-entry",
+    "heroku-postbuild": "icelab-assets build"
   }
 }
