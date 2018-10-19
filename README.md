@@ -2,6 +2,13 @@
 
 A fresh rebuild of decafsucks.com, built on a hybrid Hanami/dry-rb/rom-rb stack.
 
+## Requirements
+
+For developmeent, the app requires:
+
+- [asdf](https://github.com/asdf-vm/asdf) to install and manage system services
+- [overmind](https://github.com/DarthSim/overmind) to launch system services and app processes (install with `brew install tmux overmind`)
+
 ## Installation
 
 After cloning, run:
@@ -9,6 +16,16 @@ After cloning, run:
 ```
 ./bin/bootstrap
 ```
+
+## Running system services
+
+To start the system services, run:
+
+```
+./bin/services
+```
+
+This must be running before completing the following steps.
 
 ## Setup
 

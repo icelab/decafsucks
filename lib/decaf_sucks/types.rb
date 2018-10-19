@@ -8,3 +8,6 @@ module DecafSucks
     include Dry::Types.module
   end
 end
+
+# TODO: remove this shim once snowflakes no longer requires it
+Types = DecafSucks::Types
