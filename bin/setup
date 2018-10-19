@@ -5,10 +5,17 @@
 # This script:
 #  - calls bootstrap to acquire any new dependencies
 #  - creates a .env file based on .env.example
+#  - creates development and test databases
 
 require "fileutils"
 require_relative "script_helpers"
 
 in_app_root setup: :bootstrap do
   FileUtils.cp ".env-example", ".env" unless File.exist?(".env")
+
+  run "db create"
+  run "db create", env: :test
+
+  run "db reset"
+  run "db reset", env: :test
 end

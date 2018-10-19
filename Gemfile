@@ -15,6 +15,12 @@ gem "hanami-controller", git: "https://github.com/hanami/controller.git", branch
 gem "puma"
 gem "rack"
 
+# Persistence
+gem "pg"
+gem "rom", git: "https://github.com/rom-rb/rom.git", branch: "master"
+gem "rom-sql", git: "https://github.com/rom-rb/rom-sql.git", branch: "master"
+gem "sequel_pg"
+
 # Application dependencies
 gem "dry-auto_inject", git: "https://github.com/dry-rb/dry-auto_inject.git", branch: "respect-previously-defined-ivars-during-initialize"
 gem "dry-matcher"

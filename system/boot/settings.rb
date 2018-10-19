@@ -11,5 +11,8 @@ DecafSucks::Container.boot :settings, from: :system do
     # Assets
     key :assets_precompiled, DecafSucks::Types::Params::Bool
     key :assets_server_url, DecafSucks::Types::Strict::String.constrained(filled: true).optional.default(nil)
+
+    # Persistence
+    key :database_url, DecafSucks::Types::Strict::String.constrained(filled: true)
   end
 end
