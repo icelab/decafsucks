@@ -1,6 +1,9 @@
 # Local service data
 /data/*
 
+# Import files
+/_imports
+
 # App settings (keeping *-example files checked in)
 /.env*
 !/.env*-example

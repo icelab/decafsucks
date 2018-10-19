@@ -4,12 +4,8 @@ ROM::SQL.migration do
       primary_key :id
       column :name, :text, null: false
 
-      column :lat, :int, null: false, index: true
-      column :lng, :int, null: false, index: true
       column :address, :text, null: false
-
-      column :simplified_name, :text, null: false
-      column :dmetaphone_name, :text, null: false, index: true
+      column :coordinates, :point
 
       column :rating, :int, index: true
       column :reviews_count, :int, null: false, default: 0

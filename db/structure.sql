@@ -40,11 +40,8 @@ SET default_with_oids = false;
 CREATE TABLE public.cafes (
     id integer NOT NULL,
     name text NOT NULL,
-    lat integer NOT NULL,
-    lng integer NOT NULL,
     address text NOT NULL,
-    simplified_name text NOT NULL,
-    dmetaphone_name text NOT NULL,
+    coordinates point,
     rating integer,
     reviews_count integer DEFAULT 0 NOT NULL,
     last_reviewed_at timestamp without time zone,
@@ -112,7 +109,9 @@ CREATE TABLE public.schema_migrations (
 CREATE TABLE public.users (
     id integer NOT NULL,
     name text NOT NULL,
-    reviews_count integer DEFAULT 0 NOT NULL
+    reviews_count integer DEFAULT 0 NOT NULL,
+    created_at timestamp without time zone NOT NULL,
+    updated_at timestamp without time zone NOT NULL
 );
 
 
@@ -163,31 +162,10 @@ ALTER TABLE ONLY public.users
 
 
 --
--- Name: cafes_dmetaphone_name_index; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX cafes_dmetaphone_name_index ON public.cafes USING btree (dmetaphone_name);
-
-
---
 -- Name: cafes_last_reviewed_at_index; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX cafes_last_reviewed_at_index ON public.cafes USING btree (last_reviewed_at);
-
-
---
--- Name: cafes_lat_index; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX cafes_lat_index ON public.cafes USING btree (lat);
-
-
---
--- Name: cafes_lng_index; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX cafes_lng_index ON public.cafes USING btree (lng);
 
 
 --

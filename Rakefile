@@ -6,3 +6,5 @@ begin
   task default: [:spec]
 rescue LoadError
 end
+
+Rake.add_rakelib "tasks"
