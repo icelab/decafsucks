@@ -3,16 +3,12 @@
 # bootstrap script - install or update project dependencies
 
 # This script:
-#  - installs asdf plugins and tools
 #  - bundle installs
 #  - yarn installs
 
 require_relative "script_helpers"
 
 in_app_root :bootstrap do
-  execute_command "asdf plugin-add postgres || true"
-  execute_command "asdf install"
-
   execute_command "bundle install"
   execute_command "yarn install"
 end

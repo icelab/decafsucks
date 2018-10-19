@@ -6,7 +6,7 @@ A fresh rebuild of decafsucks.com, built on a hybrid Hanami/dry-rb/rom-rb stack.
 
 For developmeent, the app requires:
 
-- [asdf](https://github.com/asdf-vm/asdf) to install and manage system services
+- Postgres with PostGIS enabled
 - [overmind](https://github.com/DarthSim/overmind) to launch system services and app processes (install with `brew install tmux overmind`)
 
 ## Installation
