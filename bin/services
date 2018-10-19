@@ -1,0 +1,3 @@
+#!/bin/sh
+
+overmind start -f Procfile.services -s .overmind.services.sock
