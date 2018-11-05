@@ -30,8 +30,9 @@ gem "dry-transaction"
 gem "dry-types"
 gem "dry-validation"
 gem "dry-view"
-gem "down"
-gem "slim"
+gem "down", "~> 4.6"
+gem "slim", "~> 4.0"
+gem "typhoeus", "~> 1.3"
 
 group :development, :test do
   gem "foreman"
