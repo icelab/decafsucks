@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/dry-rb/dry-auto_inject.git
-  revision: 24801a539b8b229972d47ec26e699e9ff0b1c4aa
+  revision: 193ed4891c556bb8bb75561cc40a64d8cf87883d
   branch: respect-previously-defined-ivars-during-initialize
   specs:
     dry-auto_inject (0.4.6)
