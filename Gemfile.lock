@@ -39,7 +39,7 @@ GIT
 
 GIT
   remote: https://github.com/icelab/snowflakes
-  revision: f4e11fca96a48d566302ed956f7c5d1cd29f55ff
+  revision: 5186ce61bee011d07e289d490fcd1a8805f277a8
   branch: master
   specs:
     snowflakes (0.1.0)
