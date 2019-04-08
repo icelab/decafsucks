@@ -1,11 +1,11 @@
 # auto_register: false
 
-require "dry-struct"
-require "dry-types"
+require "dry/struct"
+require "dry/types"
 
 module DecafSucks
   module Types
-    include Dry::Types.module
+    include Dry.Types(default: :strict)
   end
 end
 

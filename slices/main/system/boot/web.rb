@@ -1,4 +1,4 @@
-DecafSucks::Application.boot :web, namespace: true do |container|
+DecafSucks::Main::Slice.boot :web, namespace: true do |container|
   init do
     require "hanami/controller"
     require "snowflakes/web/router/endpoint_resolver"

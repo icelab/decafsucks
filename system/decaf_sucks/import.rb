@@ -1,5 +1,5 @@
-require_relative "container"
+require_relative "application"
 
 module DecafSucks
-  Import = Container.injector
+  Import = Application.injector
 end

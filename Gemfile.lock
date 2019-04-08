@@ -1,22 +1,23 @@
 GIT
-  remote: https://github.com/dry-rb/dry-auto_inject.git
-  revision: 193ed4891c556bb8bb75561cc40a64d8cf87883d
-  branch: respect-previously-defined-ivars-during-initialize
+  remote: https://github.com/hanami/cli
+  revision: 804b784823b8c28425d85c2f583e604e2966ad8c
+  branch: unstable
   specs:
-    dry-auto_inject (0.4.6)
-      dry-container (>= 0.3.4)
+    hanami-cli (1.0.0.alpha1)
+      concurrent-ruby (~> 1.0)
+      hanami-utils (~> 2.0.alpha)
 
 GIT
-  remote: https://github.com/hanami/controller.git
-  revision: 027dbe2e56397b534e859fc283990cad1b6addd6
-  branch: action-new
+  remote: https://github.com/hanami/controller
+  revision: c311b3074bc61070ac742098c6be51851ce05a9c
+  branch: unstable
   specs:
     hanami-controller (2.0.0.alpha1)
       hanami-utils (~> 2.0.alpha)
       rack (~> 2.0)
 
 GIT
-  remote: https://github.com/hanami/router.git
+  remote: https://github.com/hanami/router
   revision: 9de6db76aab38e38b2883f06cbdc32671a8d547d
   branch: configurable-endpoint-resolver
   specs:
@@ -28,8 +29,8 @@ GIT
       rack (~> 2.0)
 
 GIT
-  remote: https://github.com/hanami/utils.git
-  revision: ee41fdad0aa7c6ad9fe8b4f6a405609323bb92e4
+  remote: https://github.com/hanami/utils
+  revision: cb5d97e1ebe795d9f40584318e832c3e14163273
   branch: unstable
   specs:
     hanami-utils (2.0.0.alpha1)
@@ -38,28 +39,21 @@ GIT
 
 GIT
   remote: https://github.com/icelab/snowflakes
-  revision: ebd10e09be58e26ff784291662088bb097316ae1
+  revision: f4e11fca96a48d566302ed956f7c5d1cd29f55ff
   branch: master
   specs:
     snowflakes (0.1.0)
-      dry-configurable (~> 0.6)
-      thor (~> 0.19)
+      dry-inflector
+      dry-monitor
+      dry-system
+      dry-types (~> 0.15, >= 0.15.0)
+      hanami-cli
+      hanami-utils
+      rack
 
 GIT
-  remote: https://github.com/rom-rb/rom-sql.git
-  revision: f93069aed79c9a9ef23ef6a5ffda3e9e73743e30
-  branch: master
-  specs:
-    rom-sql (2.5.0)
-      dry-core (~> 0.3)
-      dry-equalizer (~> 0.2)
-      dry-types (~> 0.13.0)
-      rom-core (~> 4.2)
-      sequel (>= 4.49)
-
-GIT
-  remote: https://github.com/rom-rb/rom.git
-  revision: d8dba243769c2a11e3697c8e5ec2653ddc4ed65b
+  remote: https://github.com/rom-rb/rom
+  revision: 3352188bfe656deb1b13a134c31bb54ad975d797
   branch: master
   specs:
     rom (4.2.1)
@@ -71,123 +65,139 @@ GIT
       rom-core (~> 4.0)
       transproc (~> 1.0)
     rom-core (4.2.1)
-      concurrent-ruby (~> 1.0)
+      concurrent-ruby (~> 1.1)
       dry-container (~> 0.6)
       dry-core (~> 0.3)
       dry-equalizer (~> 0.2)
       dry-inflector (~> 0.1)
       dry-initializer (~> 2.0)
-      dry-types (~> 0.13.0)
-      rom-mapper (~> 1.2, >= 1.2.1)
-    rom-mapper (1.2.1)
-      dry-core (~> 0.3, >= 0.3.1)
-      dry-equalizer (~> 0.2)
-      dry-struct (~> 0.5.0)
-      dry-types (~> 0.13.0)
-      transproc (~> 1.0)
+      dry-struct (~> 0.7.0)
+      dry-types (~> 0.15.0)
     rom-repository (2.0.2)
       dry-core (~> 0.3)
       dry-initializer (~> 2.0)
       rom-core (~> 4.0)
 
+GIT
+  remote: https://github.com/rom-rb/rom-sql
+  revision: 80511015f4ba5b921abe05d5a2e6c260221d19d0
+  branch: master
+  specs:
+    rom-sql (2.5.0)
+      dry-core (~> 0.3)
+      dry-equalizer (~> 0.2)
+      dry-types (~> 0.15.0)
+      rom-core (~> 4.2)
+      sequel (>= 4.49)
+
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.5.2)
+    addressable (2.6.0)
       public_suffix (>= 2.0.2, < 4.0)
-    byebug (10.0.2)
-    capybara (3.7.2)
+    byebug (11.0.1)
+    capybara (3.16.1)
       addressable
       mini_mime (>= 0.1.3)
       nokogiri (~> 1.8)
       rack (>= 1.6.0)
       rack-test (>= 0.6.3)
-      xpath (~> 3.1)
-    capybara-screenshot (1.0.21)
+      regexp_parser (~> 1.2)
+      xpath (~> 3.2)
+    capybara-screenshot (1.0.22)
       capybara (>= 1.0, < 4)
       launchy
     cliver (0.3.2)
     coderay (1.1.2)
-    concurrent-ruby (1.0.5)
+    concurrent-ruby (1.1.5)
     diff-lcs (1.3)
-    dotenv (0.7.0)
-    down (4.6.0)
+    down (4.8.0)
       addressable (~> 2.5)
-    dry-configurable (0.7.0)
+    dry-auto_inject (0.6.0)
+      dry-container (>= 0.3.4)
+    dry-configurable (0.8.2)
       concurrent-ruby (~> 1.0)
-    dry-container (0.6.0)
+      dry-core (~> 0.4, >= 0.4.7)
+    dry-container (0.7.0)
       concurrent-ruby (~> 1.0)
       dry-configurable (~> 0.1, >= 0.1.3)
     dry-core (0.4.7)
       concurrent-ruby (~> 1.0)
-    dry-equalizer (0.2.1)
-    dry-events (0.1.0)
+    dry-equalizer (0.2.2)
+    dry-events (0.1.1)
       concurrent-ruby (~> 1.0)
       dry-core (~> 0.4)
       dry-equalizer (~> 0.2)
     dry-inflector (0.1.2)
     dry-initializer (2.5.0)
-    dry-logic (0.4.2)
-      dry-container (~> 0.2, >= 0.2.6)
+    dry-logic (0.6.0)
+      concurrent-ruby (~> 1.0)
       dry-core (~> 0.2)
       dry-equalizer (~> 0.2)
     dry-matcher (0.7.0)
-    dry-monads (1.0.1)
+    dry-monads (1.2.0)
       concurrent-ruby (~> 1.0)
       dry-core (~> 0.4, >= 0.4.4)
       dry-equalizer
-    dry-monitor (0.1.2)
+    dry-monitor (0.3.0)
       dry-configurable (~> 0.5)
+      dry-core (~> 0.4)
       dry-equalizer (~> 0.2)
       dry-events (~> 0.1)
-      rouge (~> 2.0, >= 2.2.1)
-    dry-struct (0.5.1)
+    dry-schema (0.5.0)
+      concurrent-ruby (~> 1.0)
+      dry-configurable (~> 0.8, >= 0.8.0)
+      dry-core (~> 0.2, >= 0.2.1)
+      dry-equalizer (~> 0.2)
+      dry-initializer (~> 2.4)
+      dry-logic (~> 0.6, >= 0.6.0)
+      dry-types (~> 0.15, >= 0.15.0)
+    dry-struct (0.7.0)
       dry-core (~> 0.4, >= 0.4.3)
       dry-equalizer (~> 0.2)
-      dry-types (~> 0.13)
+      dry-types (~> 0.15)
       ice_nine (~> 0.11)
-    dry-system (0.10.1)
+    dry-system (0.11.0)
       concurrent-ruby (~> 1.0)
       dry-auto_inject (>= 0.4.0)
       dry-configurable (~> 0.7, >= 0.7.0)
-      dry-container (~> 0.6)
+      dry-container (~> 0.7)
       dry-core (>= 0.3.1)
       dry-equalizer (~> 0.2)
       dry-inflector (~> 0.1, >= 0.1.2)
-      dry-struct (~> 0.5)
+      dry-struct (~> 0.7.0)
     dry-transaction (0.13.0)
       dry-container (>= 0.2.8)
       dry-events (>= 0.1.0)
       dry-matcher (>= 0.7.0)
       dry-monads (>= 0.4.0)
-    dry-types (0.13.2)
+    dry-types (0.15.0)
       concurrent-ruby (~> 1.0)
       dry-container (~> 0.3)
       dry-core (~> 0.4, >= 0.4.4)
-      dry-equalizer (~> 0.2)
+      dry-equalizer (~> 0.2, >= 0.2.2)
       dry-inflector (~> 0.1, >= 0.1.2)
-      dry-logic (~> 0.4, >= 0.4.2)
-    dry-validation (0.12.2)
+      dry-logic (~> 0.5, >= 0.5)
+    dry-validation (1.0.0.beta2)
       concurrent-ruby (~> 1.0)
-      dry-configurable (~> 0.1, >= 0.1.3)
       dry-core (~> 0.2, >= 0.2.1)
       dry-equalizer (~> 0.2)
-      dry-logic (~> 0.4, >= 0.4.0)
-      dry-types (~> 0.13.1)
-    dry-view (0.5.2)
+      dry-initializer (~> 2.5)
+      dry-schema (~> 0.5, >= 0.5)
+    dry-view (0.7.0)
       dry-configurable (~> 0.1)
       dry-core (~> 0.2)
       dry-equalizer (~> 0.2)
-      tilt (~> 2.0)
+      dry-inflector (~> 0.1)
+      tilt (~> 2.0, >= 2.0.6)
     dry-web (0.8.0)
       dry-monitor (~> 0.1)
       dry-system (~> 0.9)
-    ffi (1.9.25)
-    foreman (0.64.0)
-      dotenv (~> 0.7.0)
-      thor (>= 0.13.6)
+    ffi (1.10.0)
+    foreman (0.85.0)
+      thor (~> 0.19.1)
     formatador (0.2.5)
-    guard (2.14.2)
+    guard (2.15.0)
       formatador (>= 0.2.4)
       listen (>= 2.7, < 4.0)
       lumberjack (>= 1.0.12, < 2.0)
@@ -202,7 +212,6 @@ GEM
       spoon
     hansi (0.2.0)
     ice_nine (0.11.2)
-    inflecto (0.0.2)
     launchy (2.4.3)
       addressable (~> 2.3)
     listen (3.1.5)
@@ -210,47 +219,47 @@ GEM
       rb-inotify (~> 0.9, >= 0.9.7)
       ruby_dep (~> 1.2)
     lumberjack (1.0.13)
-    method_source (0.9.0)
+    method_source (0.9.2)
     mini_mime (1.0.1)
-    mini_portile2 (2.3.0)
+    mini_portile2 (2.4.0)
     mustermann (1.0.3)
     mustermann-contrib (1.0.3)
       hansi (~> 0.2.0)
       mustermann (= 1.0.3)
     nenv (0.3.0)
-    nokogiri (1.8.4)
-      mini_portile2 (~> 2.3.0)
+    nokogiri (1.10.2)
+      mini_portile2 (~> 2.4.0)
     notiffany (0.1.1)
       nenv (~> 0.1)
       shellany (~> 0.0)
-    pg (1.1.3)
+    pg (1.1.4)
     poltergeist (1.18.1)
       capybara (>= 2.1, < 4)
       cliver (~> 0.3.1)
       websocket-driver (>= 0.2.0)
-    pry (0.11.3)
+    pry (0.12.2)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
-    pry-byebug (3.6.0)
-      byebug (~> 10.0)
+    pry-byebug (3.7.0)
+      byebug (~> 11.0)
       pry (~> 0.10)
     public_suffix (3.0.3)
-    puma (3.12.0)
-    rack (2.0.5)
+    puma (3.12.1)
+    rack (2.0.7)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
-    rake (12.3.1)
+    rake (12.3.2)
     rb-fsevent (0.10.3)
-    rb-inotify (0.9.10)
-      ffi (>= 0.5.0, < 2)
-    rouge (2.2.1)
+    rb-inotify (0.10.0)
+      ffi (~> 1.0)
+    regexp_parser (1.4.0)
     rspec (3.8.0)
       rspec-core (~> 3.8.0)
       rspec-expectations (~> 3.8.0)
       rspec-mocks (~> 3.8.0)
     rspec-core (3.8.0)
       rspec-support (~> 3.8.0)
-    rspec-expectations (3.8.1)
+    rspec-expectations (3.8.2)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.8.0)
     rspec-mocks (3.8.0)
@@ -258,8 +267,8 @@ GEM
       rspec-support (~> 3.8.0)
     rspec-support (3.8.0)
     ruby_dep (1.5.0)
-    sequel (5.13.0)
-    sequel_pg (1.11.0)
+    sequel (5.19.0)
+    sequel_pg (1.12.0)
       pg (>= 0.18.0)
       sequel (>= 4.38.0)
     shellany (0.0.1)
@@ -268,14 +277,14 @@ GEM
       tilt (>= 2.0.6, < 2.1)
     spoon (0.0.6)
       ffi
-    temple (0.8.0)
-    thor (0.20.0)
-    tilt (2.0.8)
-    transproc (1.0.2)
+    temple (0.8.1)
+    thor (0.19.4)
+    tilt (2.0.9)
+    transproc (1.0.3)
     websocket-driver (0.7.0)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.3)
-    xpath (3.1.0)
+    xpath (3.2.0)
       nokogiri (~> 1.8)
 
 PLATFORMS
@@ -285,23 +294,24 @@ DEPENDENCIES
   capybara
   capybara-screenshot
   down
-  dry-auto_inject!
+  dry-auto_inject
   dry-matcher
   dry-monads
+  dry-schema (~> 0.5)
   dry-struct
   dry-system
   dry-transaction
   dry-types
-  dry-validation
+  dry-validation (= 1.0.0.beta2)
   dry-view
   dry-web
   foreman
   guard
   guard-rack
+  hanami-cli!
   hanami-controller!
   hanami-router!
   hanami-utils!
-  inflecto
   pg
   poltergeist
   pry-byebug
@@ -319,4 +329,4 @@ RUBY VERSION
    ruby 2.5.1p57
 
 BUNDLED WITH
-   1.16.6
+   1.17.3

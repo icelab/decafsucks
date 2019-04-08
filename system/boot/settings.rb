@@ -1,4 +1,4 @@
-DecafSucks::Container.boot :settings, from: :system do
+DecafSucks::Application.boot :settings, from: :system do
   before :init do
     require "decaf_sucks/types"
   end

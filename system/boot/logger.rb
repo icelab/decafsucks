@@ -1,4 +1,4 @@
-DecafSucks::Container.boot :logger do |container|
+DecafSucks::Application.boot :logger do |container|
   start do
     use :settings
 

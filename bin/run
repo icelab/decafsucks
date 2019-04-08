@@ -1,13 +1,7 @@
 #!/usr/bin/env ruby
 
-require "bundler"
-Bundler.setup
-
+require "bundler/setup"
 require "snowflakes/cli"
-require_relative "script_helpers"
+require_relative "../system/decaf_sucks/application"
 
-begin
-  require_relative "../config/snowflakes"
-rescue LoadError; end
-
-Snowflakes::CLI.start(ARGV)
+Snowflakes::CLI.new.call

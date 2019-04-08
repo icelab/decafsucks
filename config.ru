@@ -1,8 +1,10 @@
-require_relative "system/boot"
+require_relative "system/decaf_sucks/application"
+DecafSucks::Application.boot!
+
 require "decaf_sucks/web/application"
 
 run DecafSucks::Web::Application.new(
-  core: DecafSucks::Container,
-  main: DecafSucks::Main::Container,
-  admin: DecafSucks::Admin::Container,
+  core: DecafSucks::Application,
+  main: DecafSucks::Main::Slice,
+  admin: DecafSucks::Admin::Slice,
 )

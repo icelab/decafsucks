@@ -1,34 +1,39 @@
 source "https://rubygems.org"
 
+git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
+
 ruby "2.5.1"
 
 gem "rake"
-gem "snowflakes", git: "https://github.com/icelab/snowflakes", branch: "master"
-gem "inflecto" # FIXME: required for snowflakes, remove later
+gem "snowflakes", github: "icelab/snowflakes", branch: "master"
+# gem "snowflakes", path: "~/src/github.com/icelab/snowflakes"
+gem "hanami-cli", github: "hanami/cli", branch: "unstable"
+# gem "hanami-cli", path: "~/src/github.com/hanami/cli"
 
 # Web framework
 gem "dry-system"
 gem "dry-web"
-gem "hanami-utils", git: "https://github.com/hanami/utils.git", branch: "unstable"
-gem "hanami-router", git: "https://github.com/hanami/router.git", branch: "configurable-endpoint-resolver"
-gem "hanami-controller", git: "https://github.com/hanami/controller.git", branch: "action-new"
+gem "hanami-utils", github: "hanami/utils", branch: "unstable"
+gem "hanami-router", github: "hanami/router", branch: "configurable-endpoint-resolver"
+gem "hanami-controller", github: "hanami/controller", branch: "unstable"
 gem "puma"
 gem "rack"
 
 # Persistence
 gem "pg"
-gem "rom", git: "https://github.com/rom-rb/rom.git", branch: "master"
-gem "rom-sql", git: "https://github.com/rom-rb/rom-sql.git", branch: "master"
+gem "rom", github: "rom-rb/rom", branch: "master"
+gem "rom-sql", github: "rom-rb/rom-sql", branch: "master"
 gem "sequel_pg"
 
 # Application dependencies
-gem "dry-auto_inject", git: "https://github.com/dry-rb/dry-auto_inject.git", branch: "respect-previously-defined-ivars-during-initialize"
+gem "dry-auto_inject"
 gem "dry-matcher"
 gem "dry-monads"
+gem "dry-schema", "~> 0.5"
 gem "dry-struct"
 gem "dry-transaction"
 gem "dry-types"
-gem "dry-validation"
+gem "dry-validation", "1.0.0.beta2"
 gem "dry-view"
 gem "down"
 gem "slim"

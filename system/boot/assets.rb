@@ -1,4 +1,4 @@
-DecafSucks::Container.boot :assets do |container|
+DecafSucks::Application.boot :assets do |container|
   init do
     require "snowflakes/assets"
   end

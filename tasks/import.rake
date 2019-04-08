@@ -7,9 +7,9 @@ desc "Import leegacy content from CSV files in _imports/"
 task :import do
   point_struct = Struct.new(:x, :y)
 
-  require_relative "../system/decaf_sucks/container"
+  require_relative "../system/decaf_sucks/application"
 
-  relations = DecafSucks::Container["persistence.rom"].relations
+  relations = DecafSucks::Application["persistence.rom"].relations
 
   imports_dir = Pathname(File.join(__dir__, "../_imports"))
 

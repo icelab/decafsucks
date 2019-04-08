@@ -1,6 +1,6 @@
-DecafSucks::Container.boot :monitor do
+DecafSucks::Application.boot :monitor do
   init do
-    require "dry/monitor"
+    require "dry/monitor/sql/logger"
   end
 
   start do
