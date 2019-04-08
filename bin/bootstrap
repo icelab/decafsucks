@@ -1,14 +1,23 @@
-#!/usr/bin/env ruby
-
+#!/bin/sh
 # bootstrap script - install or update project dependencies
+set -e
 
-# This script:
-#  - bundle installs
-#  - yarn installs
+cd "$(dirname "$0")/.."
 
-require_relative "script_helpers"
+if [ "$(uname -s)" = "Darwin" ]; then
+  brew bundle check >/dev/null 2>&1  || {
+    echo "==> Installing Homebrew dependencies…"
+    brew bundle
+  }
 
-in_app_root :bootstrap do
-  execute_command "bundle install"
-  execute_command "yarn install"
-end
+  echo "==> Installing package versions…"
+  brew bootstrap-asdf
+fi
+
+bundle check >/dev/null 2>&1 || {
+  echo "==> Installing gem dependencies…"
+  bundle install --quiet
+}
+
+echo "==> Installing node packages…"
+yarn
