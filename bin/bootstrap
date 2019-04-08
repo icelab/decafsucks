@@ -1,5 +1,7 @@
 #!/bin/sh
-# bootstrap script - install or update project dependencies
+
+# bootstrap - Resolve all dependencies that the application requires to run.
+
 set -e
 
 cd "$(dirname "$0")/.."

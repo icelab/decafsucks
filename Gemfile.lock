@@ -194,8 +194,6 @@ GEM
       dry-monitor (~> 0.1)
       dry-system (~> 0.9)
     ffi (1.10.0)
-    foreman (0.85.0)
-      thor (~> 0.19.1)
     formatador (0.2.5)
     guard (2.15.0)
       formatador (>= 0.2.4)
@@ -305,7 +303,6 @@ DEPENDENCIES
   dry-validation (= 1.0.0.beta2)
   dry-view
   dry-web
-  foreman
   guard
   guard-rack
   hanami-cli!

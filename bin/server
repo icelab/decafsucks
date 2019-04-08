@@ -1,61 +1,11 @@
-#!/usr/bin/env ruby
+#!/bin/sh
 
-require_relative "script_helpers"
-require "optionparser"
+# server - Launch the application and its helper processes locally.
 
-options = {
-  retry: true,
-}
+set -e
 
-OptionParser.new do |opts|
-  opts.banner = "Usage: bin/server [options]"
+cd "$(dirname "$0")/.."
 
-  opts.on "--update", "Run update script before starting server" do |v|
-    options[:update] = v
-  end
+test -z "$RACK_ENV" && RACK_ENV='development'
 
-  opts.on "--retry", "Retry with --update if server fails" do |v|
-    options[:retry] = v
-  end
-
-  opts.on "--no-retry", "Retry with --update if server fails" do
-    options[:retry] = false
-  end
-
-  opts.on "-h", "--help", "Prints this help" do
-    puts opts
-    exit
-  end
-end.parse!
-
-if options[:update]
-  system "bin/update"
-end
-
-command =
-  if `which overmind` && $?.success? # rubocop:disable Lint/LiteralAsCondition
-    "overmind start -f Procfile.dev"
-  else
-    "bundle exec foreman start -f Procfile.dev"
-  end
-
-start_time = Time.now
-pid = spawn(command, in: STDIN, out: STDOUT, err: STDERR)
-Process.wait pid
-_status = $?
-end_time = Time.now
-
-at_exit do
-  # If our process manager could return a non-zero exit code if one of its
-  # process fail, then we won't need this time-based retry determination, and
-  # instead we could use `!status.success?`
-  #
-  # Related overmind issue: https://github.com/DarthSim/overmind/issues/29
-  should_retry = start_time - end_time < 30
-
-  if should_retry && options[:retry]
-    puts "\nServer failed, retrying with bin/update\n"
-
-    exec $0, "--update", "--no-retry"
-  end
-end
+hivemind Procfile.dev

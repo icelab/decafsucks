@@ -1,21 +1,18 @@
-#!/usr/bin/env ruby
+#!/bin/sh
 
-# setup script - sets the project up in its initial state. Run after initial clone.
+# setup - Set up application for the first time after cloning.
 
-# This script:
-#  - calls bootstrap to acquire any new dependencies
-#  - creates a .env file based on .env.example
-#  - creates development and test databases
+set -e
 
-require "fileutils"
-require_relative "script_helpers"
+cd "$(dirname "$0")/.."
 
-in_app_root setup: :bootstrap do
-  FileUtils.cp ".env-example", ".env" unless File.exist?(".env")
+bin/bootstrap
 
-  run "db create"
-  run "db create", env: :test
+echo "==> Setting up database…"
+bin/run db create
+bin/run db create -e test
 
-  run "db reset"
-  run "db reset", env: :test
-end
+bin/run db reset
+bin/run db reset -e test
+
+echo "==> App is ready to go!"

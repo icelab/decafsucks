@@ -39,7 +39,6 @@ gem "down"
 gem "slim"
 
 group :development, :test do
-  gem "foreman"
   gem "guard"
   gem "guard-rack"
   gem "pry-byebug", platform: :mri

@@ -1,11 +1,12 @@
-#!/usr/bin/env ruby
+#!/bin/sh
 
-# update - updates the project after a fresh pull.
+# update - Update the application to run for its current checkout.
 
-# This script:
-#  - does nothing right now
+set -e
 
-require_relative "script_helpers"
+cd "$(dirname "$0")/.."
 
-in_app_root update: :bootstrap do
-end
+bin/bootstrap
+
+echo "==> Updating database…"
+bin/run db migrate

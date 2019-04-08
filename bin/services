@@ -1,3 +1,5 @@
 #!/bin/sh
 
-overmind start -f Procfile.services -s .overmind.services.sock
+# services - Run the application's supporting services locally
+
+hivemind Procfile.services
