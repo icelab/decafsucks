@@ -18,8 +18,8 @@ GIT
 
 GIT
   remote: https://github.com/hanami/router
-  revision: 9de6db76aab38e38b2883f06cbdc32671a8d547d
-  branch: configurable-endpoint-resolver
+  revision: 72259e285bf56c059cc93997d2edd211b8cf853e
+  branch: unstable
   specs:
     hanami-router (2.0.0.alpha1)
       dry-inflector (~> 0.1)
@@ -39,8 +39,8 @@ GIT
 
 GIT
   remote: https://github.com/icelab/snowflakes
-  revision: 5186ce61bee011d07e289d490fcd1a8805f277a8
-  branch: master
+  revision: 9520ae69a71ad40f6ba952ba582fda34ae563056
+  branch: router
   specs:
     snowflakes (0.1.0)
       dry-inflector
