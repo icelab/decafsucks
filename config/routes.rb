@@ -1,7 +1,7 @@
 require "snowflakes/web"
 require "rack"
 
-Snowflakes::Web.routes do
+Snowflakes::Web.routes do |application|
   use Rack::Lint
 
   use Rack::Static,
@@ -10,7 +10,7 @@ Snowflakes::Web.routes do
 
   use Rack::Session::Cookie,
     key: "decaf_sucks.session",
-    secret: Snowflakes.application[:settings].session_secret,
+    secret: application[:settings].session_secret,
     expire_after: 10 * 365 * 24 * 60 * 60 # 10 years
 
   # use Rack::Auth::Basic, "Decaf Sucks" do |username, password|
