@@ -39,8 +39,7 @@ GIT
 
 GIT
   remote: https://github.com/icelab/snowflakes
-  revision: d8d4c9194be6f50a8f4afa2bcdd7e6973ced09a8
-  branch: router
+  revision: 55521f11f3142a9d62359f06295433dfce3c65ac
   specs:
     snowflakes (0.1.0)
       dry-inflector

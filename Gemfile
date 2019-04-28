@@ -5,7 +5,7 @@ git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 ruby "2.6.2"
 
 gem "rake"
-gem "snowflakes", github: "icelab/snowflakes", branch: "router"
+gem "snowflakes", github: "icelab/snowflakes"
 # gem "snowflakes", path: "~/src/github.com/icelab/snowflakes"
 gem "hanami-cli", github: "hanami/cli", branch: "unstable"
 # gem "hanami-cli", path: "~/src/github.com/hanami/cli"
