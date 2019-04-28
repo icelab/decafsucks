@@ -18,8 +18,8 @@ GIT
 
 GIT
   remote: https://github.com/hanami/router
-  revision: 9de6db76aab38e38b2883f06cbdc32671a8d547d
-  branch: configurable-endpoint-resolver
+  revision: e31014398986332fc6fefd64d00b0cafc04251cf
+  branch: unstable
   specs:
     hanami-router (2.0.0.alpha1)
       dry-inflector (~> 0.1)
@@ -39,55 +39,55 @@ GIT
 
 GIT
   remote: https://github.com/icelab/snowflakes
-  revision: 5186ce61bee011d07e289d490fcd1a8805f277a8
-  branch: master
+  revision: 55521f11f3142a9d62359f06295433dfce3c65ac
   specs:
     snowflakes (0.1.0)
       dry-inflector
       dry-monitor
-      dry-system
-      dry-types (~> 0.15, >= 0.15.0)
+      dry-system (~> 0.12, >= 0.12.0)
+      dry-types (~> 1.0)
       hanami-cli
       hanami-utils
       rack
 
 GIT
   remote: https://github.com/rom-rb/rom
-  revision: 3352188bfe656deb1b13a134c31bb54ad975d797
+  revision: 88d2ae5283887deeb8bd255a3330477ec0403eed
   branch: master
   specs:
-    rom (4.2.1)
-      rom-changeset (~> 1.0, >= 1.0.2)
-      rom-core (~> 4.2, >= 4.2.1)
-      rom-repository (~> 2.0, >= 2.0.2)
-    rom-changeset (1.0.2)
+    rom (5.0.1)
+      rom-changeset (~> 5.0)
+      rom-core (~> 5.0, >= 5.0.1)
+      rom-repository (~> 5.0)
+    rom-changeset (5.0.0)
       dry-core (~> 0.3, >= 0.3.1)
-      rom-core (~> 4.0)
+      rom-core (~> 5.0)
       transproc (~> 1.0)
-    rom-core (4.2.1)
+    rom-core (5.0.1)
       concurrent-ruby (~> 1.1)
-      dry-container (~> 0.6)
-      dry-core (~> 0.3)
+      dry-container (~> 0.7)
+      dry-core (~> 0.4)
       dry-equalizer (~> 0.2)
       dry-inflector (~> 0.1)
-      dry-initializer (~> 2.0)
-      dry-struct (~> 0.7.0)
-      dry-types (~> 0.15.0)
-    rom-repository (2.0.2)
-      dry-core (~> 0.3)
-      dry-initializer (~> 2.0)
-      rom-core (~> 4.0)
+      dry-initializer (~> 3.0, >= 3.0.1)
+      dry-struct (~> 1.0)
+      dry-types (~> 1.0)
+      transproc (~> 1.0)
+    rom-repository (5.0.0)
+      dry-core (~> 0.4)
+      dry-initializer (~> 3.0, >= 3.0.1)
+      rom-core (~> 5.0)
 
 GIT
   remote: https://github.com/rom-rb/rom-sql
-  revision: 80511015f4ba5b921abe05d5a2e6c260221d19d0
+  revision: 9bad3e8805ca9d517b1ca0c915aaca43a5a4056a
   branch: master
   specs:
-    rom-sql (2.5.0)
-      dry-core (~> 0.3)
+    rom-sql (3.0.0)
+      dry-core (~> 0.4)
       dry-equalizer (~> 0.2)
-      dry-types (~> 0.15.0)
-      rom-core (~> 4.2)
+      dry-types (~> 1.0)
+      rom-core (~> 5.0, >= 5.0.1)
       sequel (>= 4.49)
 
 GEM
@@ -96,7 +96,7 @@ GEM
     addressable (2.6.0)
       public_suffix (>= 2.0.2, < 4.0)
     byebug (11.0.1)
-    capybara (3.16.1)
+    capybara (3.18.0)
       addressable
       mini_mime (>= 0.1.3)
       nokogiri (~> 1.8)
@@ -113,7 +113,7 @@ GEM
     diff-lcs (1.3)
     down (4.8.0)
       addressable (~> 2.5)
-    dry-auto_inject (0.6.0)
+    dry-auto_inject (0.6.1)
       dry-container (>= 0.3.4)
     dry-configurable (0.8.2)
       concurrent-ruby (~> 1.0)
@@ -129,8 +129,8 @@ GEM
       dry-core (~> 0.4)
       dry-equalizer (~> 0.2)
     dry-inflector (0.1.2)
-    dry-initializer (2.5.0)
-    dry-logic (0.6.0)
+    dry-initializer (3.0.1)
+    dry-logic (1.0.0)
       concurrent-ruby (~> 1.0)
       dry-core (~> 0.2)
       dry-equalizer (~> 0.2)
@@ -144,20 +144,20 @@ GEM
       dry-core (~> 0.4)
       dry-equalizer (~> 0.2)
       dry-events (~> 0.1)
-    dry-schema (0.5.0)
+    dry-schema (0.6.0)
       concurrent-ruby (~> 1.0)
       dry-configurable (~> 0.8, >= 0.8.0)
-      dry-core (~> 0.2, >= 0.2.1)
+      dry-core (~> 0.4)
       dry-equalizer (~> 0.2)
-      dry-initializer (~> 2.4)
-      dry-logic (~> 0.6, >= 0.6.0)
-      dry-types (~> 0.15, >= 0.15.0)
-    dry-struct (0.7.0)
+      dry-initializer (~> 3.0)
+      dry-logic (~> 1.0)
+      dry-types (~> 1.0)
+    dry-struct (1.0.0)
       dry-core (~> 0.4, >= 0.4.3)
       dry-equalizer (~> 0.2)
-      dry-types (~> 0.15)
+      dry-types (~> 1.0)
       ice_nine (~> 0.11)
-    dry-system (0.11.0)
+    dry-system (0.12.0)
       concurrent-ruby (~> 1.0)
       dry-auto_inject (>= 0.4.0)
       dry-configurable (~> 0.7, >= 0.7.0)
@@ -165,25 +165,25 @@ GEM
       dry-core (>= 0.3.1)
       dry-equalizer (~> 0.2)
       dry-inflector (~> 0.1, >= 0.1.2)
-      dry-struct (~> 0.7.0)
+      dry-struct (~> 1.0)
     dry-transaction (0.13.0)
       dry-container (>= 0.2.8)
       dry-events (>= 0.1.0)
       dry-matcher (>= 0.7.0)
       dry-monads (>= 0.4.0)
-    dry-types (0.15.0)
+    dry-types (1.0.0)
       concurrent-ruby (~> 1.0)
       dry-container (~> 0.3)
       dry-core (~> 0.4, >= 0.4.4)
       dry-equalizer (~> 0.2, >= 0.2.2)
       dry-inflector (~> 0.1, >= 0.1.2)
-      dry-logic (~> 0.5, >= 0.5)
-    dry-validation (1.0.0.beta2)
+      dry-logic (~> 1.0)
+    dry-validation (1.0.0.rc1)
       concurrent-ruby (~> 1.0)
-      dry-core (~> 0.2, >= 0.2.1)
+      dry-core (~> 0.4)
       dry-equalizer (~> 0.2)
-      dry-initializer (~> 2.5)
-      dry-schema (~> 0.5, >= 0.5)
+      dry-initializer (~> 3.0)
+      dry-schema (~> 0.6, >= 0.6)
     dry-view (0.7.0)
       dry-configurable (~> 0.1)
       dry-core (~> 0.2)
@@ -225,7 +225,7 @@ GEM
       hansi (~> 0.2.0)
       mustermann (= 1.0.3)
     nenv (0.3.0)
-    nokogiri (1.10.2)
+    nokogiri (1.10.3)
       mini_portile2 (~> 2.4.0)
     notiffany (0.1.1)
       nenv (~> 0.1)
@@ -257,7 +257,7 @@ GEM
       rspec-mocks (~> 3.8.0)
     rspec-core (3.8.0)
       rspec-support (~> 3.8.0)
-    rspec-expectations (3.8.2)
+    rspec-expectations (3.8.3)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.8.0)
     rspec-mocks (3.8.0)
@@ -276,7 +276,7 @@ GEM
     spoon (0.0.6)
       ffi
     temple (0.8.1)
-    thor (0.19.4)
+    thor (0.20.3)
     tilt (2.0.9)
     transproc (1.0.3)
     websocket-driver (0.7.0)
@@ -300,7 +300,7 @@ DEPENDENCIES
   dry-system
   dry-transaction
   dry-types
-  dry-validation (= 1.0.0.beta2)
+  dry-validation (= 1.0.0.rc1)
   dry-view
   dry-web
   guard
