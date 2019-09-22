@@ -1,7 +1,7 @@
 require "yaml"
 require "down"
 
-module Snowflakes
+module Snowpack
   class Assets
     attr_reader :root
     attr_reader :precompiled

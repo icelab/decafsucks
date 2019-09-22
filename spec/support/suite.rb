@@ -1,7 +1,7 @@
-require "snowflakes/test/suite"
+require "snowpack/test/suite"
 
 module DecafSucks
-  class TestSuite < Snowflakes::Test::Suite
+  class TestSuite < Snowpack::Test::Suite
     configure do |config|
       require_relative "./helpers"
       config.include Test::Helpers
