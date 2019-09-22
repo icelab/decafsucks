@@ -1,10 +1,10 @@
 require "logger"
-require "snowflakes/application"
-require "snowflakes/components"
-require "snowflakes/web/plugin"
+require "snowpack/application"
+require "snowpack/components"
+require "snowpack/web/plugin"
 
 module DecafSucks
-  class Application < Snowflakes::Application
+  class Application < Snowpack::Application
     use :web
 
     configure do

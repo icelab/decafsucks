@@ -1,8 +1,8 @@
-require "snowflakes/slice"
+require "snowpack/slice"
 
 module DecafSucks
   module Main
-    class Slice < Snowflakes::Slice
+    class Slice < Snowpack::Slice
     end
   end
 end

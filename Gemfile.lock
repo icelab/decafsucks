@@ -38,17 +38,18 @@ GIT
       transproc (~> 1.0)
 
 GIT
-  remote: https://github.com/icelab/snowflakes
-  revision: 55521f11f3142a9d62359f06295433dfce3c65ac
+  remote: https://github.com/icelab/snowpack
+  revision: 9783308436a7b2d05746e577922406b2d5455047
   specs:
-    snowflakes (0.1.0)
-      dry-inflector
-      dry-monitor
+    snowpack (1.0.0.alpha5)
+      down (~> 4.0)
+      dry-inflector (~> 0.1)
+      dry-monitor (~> 0.3.1)
       dry-system (~> 0.12, >= 0.12.0)
       dry-types (~> 1.0)
       hanami-cli
       hanami-utils
-      rack
+      rack (~> 2.0)
 
 GIT
   remote: https://github.com/rom-rb/rom
@@ -121,7 +122,7 @@ GEM
     dry-container (0.7.0)
       concurrent-ruby (~> 1.0)
       dry-configurable (~> 0.1, >= 0.1.3)
-    dry-core (0.4.7)
+    dry-core (0.4.9)
       concurrent-ruby (~> 1.0)
     dry-equalizer (0.2.2)
     dry-events (0.1.1)
@@ -134,12 +135,13 @@ GEM
       concurrent-ruby (~> 1.0)
       dry-core (~> 0.2)
       dry-equalizer (~> 0.2)
-    dry-matcher (0.7.0)
+    dry-matcher (0.8.2)
+      dry-core (>= 0.4.8)
     dry-monads (1.2.0)
       concurrent-ruby (~> 1.0)
       dry-core (~> 0.4, >= 0.4.4)
       dry-equalizer
-    dry-monitor (0.3.0)
+    dry-monitor (0.3.1)
       dry-configurable (~> 0.5)
       dry-core (~> 0.4)
       dry-equalizer (~> 0.2)
@@ -166,11 +168,6 @@ GEM
       dry-equalizer (~> 0.2)
       dry-inflector (~> 0.1, >= 0.1.2)
       dry-struct (~> 1.0)
-    dry-transaction (0.13.0)
-      dry-container (>= 0.2.8)
-      dry-events (>= 0.1.0)
-      dry-matcher (>= 0.7.0)
-      dry-monads (>= 0.4.0)
     dry-types (1.0.0)
       concurrent-ruby (~> 1.0)
       dry-container (~> 0.3)
@@ -293,12 +290,11 @@ DEPENDENCIES
   capybara-screenshot
   down
   dry-auto_inject
-  dry-matcher
-  dry-monads
+  dry-matcher (~> 0.8, >= 0.8.2)
+  dry-monads (~> 1.0)
   dry-schema (~> 0.5)
   dry-struct
   dry-system
-  dry-transaction
   dry-types
   dry-validation (= 1.0.0.rc1)
   dry-view
@@ -320,7 +316,7 @@ DEPENDENCIES
   rspec
   sequel_pg
   slim
-  snowflakes!
+  snowpack!
 
 RUBY VERSION
    ruby 2.6.2p47

@@ -1,5 +1,5 @@
 require_relative "config/application"
 require_relative "config/routes"
 
-Snowflakes.application.boot!
-run Snowflakes::Web.application
+Snowpack.application.boot!
+run Snowpack::Web.application

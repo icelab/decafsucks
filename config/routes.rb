@@ -1,7 +1,7 @@
-require "snowflakes/web"
+require "snowpack/web"
 require "rack"
 
-Snowflakes::Web.routes do |application|
+Snowpack::Web.routes do |application|
   use Rack::Lint
 
   use Rack::Static,

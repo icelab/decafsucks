@@ -3,7 +3,8 @@
 # run - run the application CLI.
 
 require "bundler/setup"
-require "snowflakes/cli"
+require "snowpack/cli/application/cli"
 require_relative "../config/application"
 
-Snowflakes::CLI.new.call
+Snowpack::CLI::Application::CLI.new.call
+

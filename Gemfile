@@ -5,10 +5,8 @@ git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 ruby "2.6.2"
 
 gem "rake"
-gem "snowflakes", github: "icelab/snowflakes"
-# gem "snowflakes", path: "~/src/github.com/icelab/snowflakes"
+gem "snowpack", github: "icelab/snowpack"
 gem "hanami-cli", github: "hanami/cli", branch: "unstable"
-# gem "hanami-cli", path: "~/src/github.com/hanami/cli"
 
 # Web framework
 gem "dry-system"
@@ -27,11 +25,10 @@ gem "sequel_pg"
 
 # Application dependencies
 gem "dry-auto_inject"
-gem "dry-matcher"
-gem "dry-monads"
+gem "dry-matcher", "~> 0.8", ">= 0.8.2"
+gem "dry-monads", "~> 1.0"
 gem "dry-schema", "~> 0.5"
 gem "dry-struct"
-gem "dry-transaction"
 gem "dry-types"
 gem "dry-validation", "1.0.0.rc1"
 gem "dry-view"
