@@ -5,7 +5,6 @@ require "hanami/controller"
 require "hanami/action/cookies"
 require "hanami/action/csrf_protection"
 require "hanami/action/session"
-require "decaf_sucks/import"
 
 module DecafSucks
   module Web

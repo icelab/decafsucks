@@ -1,5 +1,4 @@
 require "decaf_sucks/web/action"
-require "decaf_sucks/main/import"
 
 module DecafSucks
   module Main

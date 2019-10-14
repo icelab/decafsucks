@@ -5,17 +5,19 @@ git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 ruby "2.6.2"
 
 gem "rake"
-gem "snowpack", github: "icelab/snowpack"
-gem "hanami-cli", github: "hanami/cli", branch: "unstable"
 
-# Web framework
+# Framework
 gem "dry-system"
 gem "dry-web"
+# gem "hanami", path: "~/src/github.com/hanami/hanami"
+gem "hanami", github: "hanami/hanami", branch: "enhancement/application-and-slices"
+gem "hanami-cli", github: "hanami/cli", branch: "unstable"
 gem "hanami-utils", github: "hanami/utils", branch: "unstable"
 gem "hanami-router", github: "hanami/router", branch: "unstable"
 gem "hanami-controller", github: "hanami/controller", branch: "unstable"
 gem "puma"
 gem "rack"
+gem "snowpack", github: "icelab/snowpack"
 
 # Persistence
 gem "pg"

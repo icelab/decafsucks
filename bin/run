@@ -3,8 +3,8 @@
 # run - run the application CLI.
 
 require "bundler/setup"
-require "snowpack/cli/application/cli"
+require "hanami/cli/application/cli"
 require_relative "../config/application"
 
-Snowpack::CLI::Application::CLI.new.call
+Hanami::CLI::Application::CLI.new.call
 

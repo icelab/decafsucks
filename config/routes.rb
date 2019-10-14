@@ -1,7 +1,6 @@
-require "snowpack/web"
 require "rack"
 
-Snowpack::Web.routes do |application|
+DecafSucks::Application.routes do |application|
   use Rack::Lint
 
   use Rack::Static,

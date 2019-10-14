@@ -17,6 +17,21 @@ GIT
       rack (~> 2.0)
 
 GIT
+  remote: https://github.com/hanami/hanami
+  revision: f4cd93c95f305e57d920b1e354bd86eb524e2a0a
+  branch: enhancement/application-and-slices
+  specs:
+    hanami (2.0.0.alpha1)
+      bundler (>= 1.16, < 3)
+      dry-inflector (~> 0.1, >= 0.1.2)
+      dry-monitor
+      dry-system (~> 0.10)
+      hanami-cli (~> 1.0.alpha)
+      hanami-controller (~> 2.0.alpha)
+      hanami-router (~> 2.0.alpha)
+      hanami-utils (~> 2.0.alpha)
+
+GIT
   remote: https://github.com/hanami/router
   revision: e31014398986332fc6fefd64d00b0cafc04251cf
   branch: unstable
@@ -116,7 +131,7 @@ GEM
       addressable (~> 2.5)
     dry-auto_inject (0.6.1)
       dry-container (>= 0.3.4)
-    dry-configurable (0.8.2)
+    dry-configurable (0.8.3)
       concurrent-ruby (~> 1.0)
       dry-core (~> 0.4, >= 0.4.7)
     dry-container (0.7.0)
@@ -301,6 +316,7 @@ DEPENDENCIES
   dry-web
   guard
   guard-rack
+  hanami!
   hanami-cli!
   hanami-controller!
   hanami-router!
