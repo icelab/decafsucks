@@ -5,7 +5,7 @@ module DecafSucks
     module Web
       module Actions
         class Home < DecafSucks::Web::Action
-          include Import[view: "web.views.home"]
+          include Deps[view: "web.views.home"]
 
           def handle(req, res)
             render(view, req, res)

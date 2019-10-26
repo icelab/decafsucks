@@ -19,7 +19,7 @@ module DecafSucks
         klass.include Hanami::Action::CSRFProtection
       end
 
-      include Import[
+      include Deps[
         "assets",
         "web.action.configuration",
         view_context: "web.view.context",
