@@ -1,4 +1,4 @@
-DecafSucks::Application.boot :persistence, namespace: true, from: :snowpack do
+DecafSucks::Application.register_bootable :persistence, namespace: true, from: :snowpack do
   configure do |config|
     config.database_url = container[:settings].database_url
     config.global_extensions = [:postgres]

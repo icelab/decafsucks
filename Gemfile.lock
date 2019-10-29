@@ -18,7 +18,7 @@ GIT
 
 GIT
   remote: https://github.com/hanami/hanami
-  revision: 5b7babd0939e0d81bd9e4736b790798edd044582
+  revision: 32761c3314e5bfc56d64e6176211fb683a9029bd
   branch: enhancement/application-and-slices
   specs:
     hanami (2.0.0.alpha1)

@@ -1,4 +1,4 @@
-DecafSucks::Application.boot :settings, from: :system do
+DecafSucks::Application.register_bootable :settings, from: :system do
   before :init do
     require "decaf_sucks/types"
   end

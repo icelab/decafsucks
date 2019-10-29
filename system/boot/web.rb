@@ -1,4 +1,4 @@
-DecafSucks::Application.boot :web, namespace: true do |container|
+DecafSucks::Application.register_bootable :web, namespace: true do |container|
   init do
     require "hanami/controller"
   end

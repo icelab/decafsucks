@@ -1,4 +1,4 @@
-DecafSucks::Application.boot :monitor do
+DecafSucks::Application.register_bootable :monitor do
   init do
     require "dry/monitor/sql/logger"
   end

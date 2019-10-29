@@ -1,4 +1,4 @@
-DecafSucks::Application.boot :assets do |container|
+DecafSucks::Application.register_bootable :assets do |container|
   init do
     require "snowpack/assets"
   end
