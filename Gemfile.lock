@@ -9,8 +9,8 @@ GIT
 
 GIT
   remote: https://github.com/hanami/controller
-  revision: c311b3074bc61070ac742098c6be51851ce05a9c
-  branch: unstable
+  revision: e01c0ad99b152daf66ce18cca638cb0d88d4c5a9
+  branch: hanami-application-support
   specs:
     hanami-controller (2.0.0.alpha1)
       hanami-utils (~> 2.0.alpha)
@@ -18,7 +18,7 @@ GIT
 
 GIT
   remote: https://github.com/hanami/hanami
-  revision: 32761c3314e5bfc56d64e6176211fb683a9029bd
+  revision: 7a70014ea71bf5ac6c05974c77498f63a8f76212
   branch: enhancement/application-and-slices
   specs:
     hanami (2.0.0.alpha1)
@@ -33,8 +33,8 @@ GIT
 
 GIT
   remote: https://github.com/hanami/router
-  revision: e31014398986332fc6fefd64d00b0cafc04251cf
-  branch: unstable
+  revision: 363b238290721ab88b421f1f6dec747bcf6fdb9c
+  branch: hanami-application-router-support
   specs:
     hanami-router (2.0.0.alpha1)
       dry-inflector (~> 0.1)

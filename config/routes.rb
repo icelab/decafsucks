@@ -1,6 +1,6 @@
 require "rack"
 
-DecafSucks::Application.routes do |application|
+Hanami.application.routes do |application|
   use Rack::Lint
 
   use Rack::Static,
